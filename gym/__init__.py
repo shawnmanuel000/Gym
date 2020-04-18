@@ -1,15 +1,17 @@
-import distutils.version
 import os
 import sys
 import warnings
+import distutils.version
+sys.path.append("./src/")
+sys.path.append("./src/envs/gym")
 
-from gym import error
-from gym.version import VERSION as __version__
-
-from gym.core import Env, GoalEnv, Wrapper, ObservationWrapper, ActionWrapper, RewardWrapper
-from gym.spaces import Space
-from gym.envs import make, spec, register
-from gym import logger
-from gym import vector
+from .version import VERSION as __version__
+from .core import Env, GoalEnv, Wrapper, ObservationWrapper, ActionWrapper, RewardWrapper
+from .spaces import Space
+from .envs import make, spec, register
+from . import error
+from . import envs
+from . import logger 
+from . import vector
 
 __all__ = ["Env", "Space", "Wrapper", "make", "spec", "register"]

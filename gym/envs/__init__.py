@@ -1,4 +1,4 @@
-from gym.envs.registration import registry, register, make, spec
+from .registration import registry, register, make, spec
 
 # Algorithmic
 # ----------------------------------------
@@ -208,6 +208,13 @@ register(
     id='Reacher-v2',
     entry_point='gym.envs.mujoco:ReacherEnv',
     max_episode_steps=50,
+    reward_threshold=-3.75,
+)
+
+register(
+    id='Reacher3D-v2',
+    entry_point='gym.envs.mujoco:ReacherEnv3D',
+    max_episode_steps=200,
     reward_threshold=-3.75,
 )
 
