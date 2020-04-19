@@ -2,8 +2,6 @@ import os
 import sys
 import warnings
 import distutils.version
-sys.path.append("./src/")
-sys.path.append("./src/envs/gym")
 
 from .version import VERSION as __version__
 from .core import Env, GoalEnv, Wrapper, ObservationWrapper, ActionWrapper, RewardWrapper

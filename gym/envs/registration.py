@@ -129,6 +129,7 @@ class EnvRegistry(object):
 
     def register(self, id, **kwargs):
         if id in self.env_specs:
+            print(f"{id} already registered")
             return
             raise error.Error('Cannot re-register id: {}'.format(id))
         self.env_specs[id] = EnvSpec(id, **kwargs)
