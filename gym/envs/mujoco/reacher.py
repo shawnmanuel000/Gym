@@ -79,6 +79,6 @@ class ReacherEnv3D(mujoco_env.MujocoEnv, utils.EzPickle):
             np.cos(theta),
             np.sin(theta),
             self.sim.data.qpos.flat[2:],
-            self.sim.data.qvel.flat[:2],
+            self.sim.data.qvel.flat,
             self.get_body_com("fingertip") - self.get_body_com("target")
         ])

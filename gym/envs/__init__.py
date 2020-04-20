@@ -214,7 +214,7 @@ register(
 register(
     id='Reacher3D-v2',
     entry_point='gym.envs.mujoco:ReacherEnv3D',
-    max_episode_steps=200,
+    max_episode_steps=500,
     reward_threshold=-3.75,
 )
 
@@ -371,7 +371,7 @@ for reward_type in ['sparse', 'dense']:
         id='FetchReach{}-v1'.format(suffix),
         entry_point='gym.envs.robotics:FetchReachEnv',
         kwargs=kwargs,
-        max_episode_steps=50,
+        max_episode_steps=200,
     )
 
     register(
