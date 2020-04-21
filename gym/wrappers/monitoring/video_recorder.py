@@ -6,7 +6,7 @@ import os.path
 import distutils.spawn, distutils.version
 import numpy as np
 from io import StringIO
-from gym import error, logger
+from ... import error, logger
 
 def touch(path):
     open(path, 'a').close()

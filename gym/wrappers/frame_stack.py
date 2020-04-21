@@ -1,8 +1,8 @@
 from collections import deque
 import numpy as np
 
-from gym.spaces import Box
-from gym import Wrapper
+from ..spaces import Box
+from .. import Wrapper
 
 
 class LazyFrames(object):

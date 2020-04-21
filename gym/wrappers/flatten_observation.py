@@ -1,6 +1,6 @@
 import numpy as np
-import gym.spaces as spaces
-from gym import ObservationWrapper
+from .. import spaces
+from .. import ObservationWrapper
 
 
 class FlattenObservation(ObservationWrapper):

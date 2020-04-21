@@ -1,6 +1,6 @@
-import gym
-from gym.spaces import Tuple
-from gym.vector.utils.spaces import batch_space
+from ... import gym
+from ..spaces import Tuple
+from .utils.spaces import batch_space
 
 __all__ = ['VectorEnv']
 

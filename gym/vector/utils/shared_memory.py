@@ -3,9 +3,9 @@ import multiprocessing as mp
 from ctypes import c_bool
 from collections import OrderedDict
 
-from gym import logger
-from gym.spaces import Tuple, Dict
-from gym.vector.utils.spaces import _BaseGymSpaces
+from ... import logger
+from ...spaces import Tuple, Dict
+from .spaces import _BaseGymSpaces
 
 __all__ = [
     'create_shared_memory',

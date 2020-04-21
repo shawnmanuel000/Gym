@@ -1,8 +1,8 @@
-import gym
-from gym import spaces
-from gym.utils import seeding
 import numpy as np
 from os import path
+from .... import gym
+from ... import spaces
+from ...utils import seeding
 
 class PendulumEnv(gym.Env):
     metadata = {

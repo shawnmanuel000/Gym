@@ -2,10 +2,10 @@ import os
 import copy
 import numpy as np
 
-import gym
-from gym import error, spaces
-from gym.utils import seeding
-from gym.envs.robotics import robot_env
+from .... import gym
+from ... import error, spaces
+from ...utils import seeding
+from . import robot_env
 
 
 class HandEnv(robot_env.RobotEnv):

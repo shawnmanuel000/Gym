@@ -2,7 +2,7 @@ import re
 import importlib
 import warnings
 
-from gym import error, logger
+from .. import error, logger
 
 # This format is true today, but it's *not* an official spec.
 # [username/](env-name)-v(version)    env-name is group 1, version is group 2
@@ -14,7 +14,7 @@ env_id_re = re.compile(r'^(?:[\w:-]+\/)?([\w:.-]+)-v(\d+)$')
 
 def load(name):
     mod_name, attr_name = name.split(":")
-    mod = importlib.import_module(mod_name)
+    mod = importlib.import_module(mod_name.replace("gym", "src.envs.Gym.gym"))
     fn = getattr(mod, attr_name)
     return fn
 
@@ -92,7 +92,7 @@ class EnvRegistry(object):
         if hasattr(env, "_reset") and hasattr(env, "_step") and not getattr(env, "_gym_disable_underscore_compat", False):
             patch_deprecated_methods(env)
         if env.spec.max_episode_steps is not None:
-            from gym.wrappers.time_limit import TimeLimit
+            from ..wrappers.time_limit import TimeLimit
             env = TimeLimit(env, max_episode_steps=env.spec.max_episode_steps)
         return env
 

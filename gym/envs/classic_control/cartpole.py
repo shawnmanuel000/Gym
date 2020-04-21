@@ -6,8 +6,8 @@ permalink: https://perma.cc/C9ZM-652R
 
 import math
 import gym
-from gym import spaces, logger
-from gym.utils import seeding
+from ... import spaces, logger
+from ...utils import seeding
 import numpy as np
 
 class CartPoleEnv(gym.Env):

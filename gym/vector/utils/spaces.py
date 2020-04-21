@@ -1,7 +1,7 @@
 import numpy as np
 from collections import OrderedDict
 
-from gym.spaces import Box, Discrete, MultiDiscrete, MultiBinary, Tuple, Dict
+from ...spaces import Box, Discrete, MultiDiscrete, MultiBinary, Tuple, Dict
 
 _BaseGymSpaces = (Box, Discrete, MultiDiscrete, MultiBinary)
 __all__ = ['_BaseGymSpaces', 'batch_space']

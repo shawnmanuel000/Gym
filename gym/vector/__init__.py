@@ -3,9 +3,9 @@ try:
 except ImportError:
     Iterable = (tuple, list)
 
-from gym.vector.async_vector_env import AsyncVectorEnv
-from gym.vector.sync_vector_env import SyncVectorEnv
-from gym.vector.vector_env import VectorEnv
+from .async_vector_env import AsyncVectorEnv
+from .sync_vector_env import SyncVectorEnv
+from .vector_env import VectorEnv
 
 __all__ = ['AsyncVectorEnv', 'SyncVectorEnv', 'VectorEnv', 'make']
 
@@ -38,7 +38,7 @@ def make(id, num_envs=1, asynchronous=True, wrappers=None, **kwargs):
     Example
     -------
     >>> import gym
-    >>> env = gym.vector.make('CartPole-v1', 3)
+    >>> env = .make('CartPole-v1', 3)
     >>> env.reset()
     array([[-0.04456399,  0.04653909,  0.01326909, -0.02099827],
            [ 0.03073904,  0.00145001, -0.03088818, -0.03131252],

@@ -1,10 +1,10 @@
-import gym
-from gym import Wrapper
-from gym import error, version, logger
+from ... import gym
+from .. import Wrapper
+from .. import error, version, logger
 import os, json, numpy as np
-from gym.wrappers.monitoring import stats_recorder, video_recorder
-from gym.utils import atomic_write, closer
-from gym.utils.json_utils import json_encode_np
+from .monitoring import stats_recorder, video_recorder
+from ..utils import atomic_write, closer
+from ..utils.json_utils import json_encode_np
 
 FILE_PREFIX = 'openaigym'
 MANIFEST_PREFIX = FILE_PREFIX + '.manifest'

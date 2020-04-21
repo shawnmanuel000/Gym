@@ -18,9 +18,9 @@ import math
 
 import numpy as np
 
-import gym
-from gym import spaces
-from gym.utils import seeding
+from .... import gym
+from ... import spaces
+from ...utils import seeding
 
 
 class Continuous_MountainCarEnv(gym.Env):

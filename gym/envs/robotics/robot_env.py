@@ -2,9 +2,9 @@ import os
 import copy
 import numpy as np
 
-import gym
-from gym import error, spaces
-from gym.utils import seeding
+from .... import gym
+from ... import error, spaces
+from ...utils import seeding
 
 try:
     import mujoco_py

@@ -1,4 +1,4 @@
-from gym import RewardWrapper
+from .. import RewardWrapper
 
 
 class TransformReward(RewardWrapper):

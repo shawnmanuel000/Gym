@@ -1,14 +1,14 @@
-from gym.envs.robotics.fetch_env import FetchEnv
-from gym.envs.robotics.fetch.slide import FetchSlideEnv
-from gym.envs.robotics.fetch.pick_and_place import FetchPickAndPlaceEnv
-from gym.envs.robotics.fetch.push import FetchPushEnv
-from gym.envs.robotics.fetch.reach import FetchReachEnv
+from .fetch_env import FetchEnv
+from .fetch.slide import FetchSlideEnv
+from .fetch.pick_and_place import FetchPickAndPlaceEnv
+from .fetch.push import FetchPushEnv
+from .fetch.reach import FetchReachEnv
 
-from gym.envs.robotics.hand.reach import HandReachEnv
-from gym.envs.robotics.hand.manipulate import HandBlockEnv
-from gym.envs.robotics.hand.manipulate import HandEggEnv
-from gym.envs.robotics.hand.manipulate import HandPenEnv
+from .hand.reach import HandReachEnv
+from .hand.manipulate import HandBlockEnv
+from .hand.manipulate import HandEggEnv
+from .hand.manipulate import HandPenEnv
 
-from gym.envs.robotics.hand.manipulate_touch_sensors import HandBlockTouchSensorsEnv
-from gym.envs.robotics.hand.manipulate_touch_sensors import HandEggTouchSensorsEnv
-from gym.envs.robotics.hand.manipulate_touch_sensors import HandPenTouchSensorsEnv
+from .hand.manipulate_touch_sensors import HandBlockTouchSensorsEnv
+from .hand.manipulate_touch_sensors import HandEggTouchSensorsEnv
+from .hand.manipulate_touch_sensors import HandPenTouchSensorsEnv

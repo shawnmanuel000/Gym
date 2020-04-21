@@ -1,4 +1,4 @@
-from gym import ObservationWrapper
+from .. import ObservationWrapper
 
 
 class TransformObservation(ObservationWrapper):

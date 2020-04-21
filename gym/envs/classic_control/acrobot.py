@@ -2,8 +2,8 @@
 import numpy as np
 from numpy import sin, cos, pi
 
-from gym import core, spaces
-from gym.utils import seeding
+from ... import core, spaces
+from ...utils import seeding
 
 __copyright__ = "Copyright 2013, RLPy http://acl.mit.edu/RLPy"
 __credits__ = ["Alborz Geramifard", "Robert H. Klein", "Christoph Dann",

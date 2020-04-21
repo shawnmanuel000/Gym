@@ -1,8 +1,8 @@
 import os
 import numpy as np
 
-from gym import utils
-from gym.envs.robotics import fetch_env
+from .... import utils
+from .. import fetch_env
 
 
 # Ensure we get the path separator correct on windows

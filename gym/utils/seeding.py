@@ -5,7 +5,7 @@ import random as _random
 import struct
 import sys
 
-from gym import error
+from .. import error
 
 def np_random(seed=None):
     if seed is not None and not (isinstance(seed, int) and 0 <= seed):

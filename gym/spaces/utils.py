@@ -1,11 +1,11 @@
 import numpy as np
 
-from gym.spaces import Box
-from gym.spaces import Discrete
-from gym.spaces import MultiDiscrete
-from gym.spaces import MultiBinary
-from gym.spaces import Tuple
-from gym.spaces import Dict
+from . import Box
+from . import Discrete
+from . import MultiDiscrete
+from . import MultiBinary
+from . import Tuple
+from . import Dict
 
 
 def flatdim(space):

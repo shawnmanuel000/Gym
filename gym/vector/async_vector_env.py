@@ -5,13 +5,10 @@ import sys
 from enum import Enum
 from copy import deepcopy
 
-from gym import logger
-from gym.vector.vector_env import VectorEnv
-from gym.error import (AlreadyPendingCallError, NoAsyncCallError,
-                       ClosedEnvironmentError)
-from gym.vector.utils import (create_shared_memory, create_empty_array,
-                              write_to_shared_memory, read_from_shared_memory,
-                              concatenate, CloudpickleWrapper, clear_mpi_env_vars)
+from .. import logger
+from ..error import (AlreadyPendingCallError, NoAsyncCallError, ClosedEnvironmentError)
+from .vector_env import VectorEnv
+from .utils import (create_shared_memory, create_empty_array,write_to_shared_memory, read_from_shared_memory,concatenate, CloudpickleWrapper, clear_mpi_env_vars)
 
 __all__ = ['AsyncVectorEnv']
 

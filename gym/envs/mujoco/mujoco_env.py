@@ -1,12 +1,10 @@
-from collections import OrderedDict
 import os
-
-
-from gym import error, spaces
-from gym.utils import seeding
 import numpy as np
 from os import path
-import gym
+from .... import gym
+from ... import error, spaces
+from ...utils import seeding
+from collections import OrderedDict
 
 try:
     import mujoco_py
