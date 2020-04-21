@@ -8,7 +8,8 @@ from .walker2d import Walker2dEnv
 from .humanoid import HumanoidEnv
 from .inverted_pendulum import InvertedPendulumEnv
 from .inverted_double_pendulum import InvertedDoublePendulumEnv
-from .reacher import ReacherEnv, ReacherEnv3D
+from .reacher import ReacherEnv
+from .reacher3D import ReacherEnv3D
 from .swimmer import SwimmerEnv
 from .humanoidstandup import HumanoidStandupEnv
 from .pusher import PusherEnv
