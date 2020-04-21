@@ -25,7 +25,7 @@
 			<joint axis="0 0 1" limited="true" name="joint0" range="-1.5 1.5" pos="0 0 0" type="hinge"/>
 			<joint axis="1 0 0" limited="true" name="joint2" range="-0.75 0.75" pos="0 0 0" type="hinge"/>
 			<body name="body01" pos="0 -0.05 0">
-				<joint axis="0 1 0" limited="true" name="joint1" pos="0 0 0" range="-1.5 1.5" type="hinge"/>
+				<joint axis="0 1 0" limited="true" name="joint1" pos="0 0 0" range="-1.0 1.0" type="hinge"/>
 				<geom fromto="0 -0.01 0 0 0.01 0" name="hinge00" rgba="0.5 0.2 0.6 1" size=".011" type="cylinder"/>
 				<geom fromto="0 0 0 0 -0.05 0" name="link01" rgba="0.0 0.4 0.6 1" size=".01" type="capsule"/>
 				<geom fromto="-0.01 -0.05 0 0.01 -0.05 0" name="hinge01" rgba="0.5 0.2 0.6 1" size=".011" type="cylinder"/>
@@ -33,14 +33,14 @@
 					<joint axis="1 0 0" limited="true" name="joint3" pos="0 0 0" range="-0.75 0.75" type="hinge"/>
 					<geom fromto="0 0 0 0 -0.05 0" name="link1" rgba="0.0 0.4 0.6 1" size=".01" type="capsule"/>
 					<body name="body11" pos="0 -0.05 0">
-						<joint axis="0 1 0" limited="true" name="joint4" pos="0 0 0" range="-1.5 1.5" type="hinge"/>
+						<joint axis="0 1 0" limited="true" name="joint4" pos="0 0 0" range="-1.0 1.0" type="hinge"/>
 						<geom fromto="0 -0.01 0 0 0.01 0" name="hinge10" rgba="0.5 0.2 0.6 1" size=".011" type="cylinder"/>
 						<geom fromto="0 0 0 0 -0.05 0" name="link11" rgba="0.0 0.4 0.6 1" size=".01" type="capsule"/>
 						<geom fromto="-0.01 -0.05 0 0.01 -0.05 0" name="hinge1" rgba="0.5 0.2 0.6 1" size=".011" type="cylinder"/>
 						<body name="body2" pos="0 -0.05 0">
-							<geom fromto="0 0 0 0 0 -0.05" name="link2" rgba="0.0 0.4 0.6 1" size=".01" type="capsule"/>
+							<geom fromto="0 0 0 0 -0.05 0" name="link2" rgba="0.0 0.4 0.6 1" size=".01" type="capsule"/>
 							<joint axis="1 0 0" limited="true" name="joint5" pos="0 0 0" range="-0.75 0.75" type="hinge"/>
-							<body name="fingertip" pos="0 0 -0.06">
+							<body name="fingertip" pos="0 -0.06 0">
 								<geom conaffinity="1" contype="1" name="fingertip" pos="0 0 0" rgba="0.0 0.8 0.6 1" size=".01" type="sphere"/>
 							</body>
 						</body>
@@ -50,8 +50,6 @@
 		</body>
 		<!-- Target -->
 		<body name="target" pos="0 -0.20 .2">
-			<!-- <joint armature="0" axis="1 0 0" damping="0" limited="true" name="target_x" pos="0 0 0" range="-0.20 0.20" ref="0" stiffness="0" type="slide"/> -->
-			<!-- <joint armature="0" axis="0 1 0" damping="0" limited="true" name="target_y" pos="0 0 0" range="-0.20 0.20" ref="0" stiffness="0" type="slide"/> -->
 			<geom conaffinity="0" contype="0" name="target" pos="0 0 0" rgba="0.4 0.8 0.2 1" size=".009" type="sphere"/>
 		</body>
 	</worldbody>

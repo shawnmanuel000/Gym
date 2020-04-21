@@ -30,21 +30,25 @@ class MujocoEnv(gym.Env):
     def __init__(self, model_path, frame_skip):
         fullpath = model_path if model_path.startswith("/") else os.path.join(os.path.dirname(__file__), "assets", model_path)
         if not path.exists(fullpath): raise IOError("File %s does not exist" % fullpath)
-        self.model = self.load_model(fullpath)
-        self.sim = mujoco_py.MjSim(self.model)
         self.frame_skip = frame_skip
-        self.data = self.sim.data
-        self._viewers = {}
-        self.viewer = None
+        self.path = fullpath
+        self.init_sim()
         self.metadata = {'render.modes': ['human', 'rgb_array', 'depth_array'],'video.frames_per_second': int(np.round(1.0 / self.dt))}
-        self.init_qpos = self.sim.data.qpos.ravel().copy()
-        self.init_qvel = self.sim.data.qvel.ravel().copy()
         self._set_action_space()
         action = self.action_space.sample()
         observation, _reward, done, _info = self.step(action)
         assert not done
         self._set_observation_space(observation)
         self.seed()
+
+    def init_sim(self):
+        self.model = self.load_model(self.path)
+        self.sim = mujoco_py.MjSim(self.model)
+        self.init_qpos = self.sim.data.qpos.ravel().copy()
+        self.init_qvel = self.sim.data.qvel.ravel().copy()
+        self.data = self.sim.data
+        self._viewers = {}
+        self.viewer = None
 
     def load_model(self, path):
         return mujoco_py.load_model_from_path(path)
