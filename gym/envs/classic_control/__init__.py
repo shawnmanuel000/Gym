@@ -1,6 +1,6 @@
-from gym.envs.classic_control.cartpole import CartPoleEnv
-from gym.envs.classic_control.mountain_car import MountainCarEnv
-from gym.envs.classic_control.continuous_mountain_car import Continuous_MountainCarEnv
-from gym.envs.classic_control.pendulum import PendulumEnv
-from gym.envs.classic_control.acrobot import AcrobotEnv
+from .cartpole import CartPoleEnv
+from .mountain_car import MountainCarEnv
+from .continuous_mountain_car import Continuous_MountainCarEnv
+from .pendulum import PendulumEnv
+from .acrobot import AcrobotEnv
 
