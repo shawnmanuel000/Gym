@@ -110,4 +110,7 @@ class ReacherEnv3D(MujocoEnv, EzPickle):
         return self._get_obs(ef_pos, target_pos, path)
 
     def _get_obs(self, pos, target, path):
-        return np.concatenate([self.sim.data.qpos.flat, self.sim.data.qvel.flat, pos, target, *path])
+        qpos = self.sim.data.qpos
+        qvel = self.sim.data.qvel
+        jpos = [self.sim.data.body_xpos[p] for p in set(self.sim.model.jnt_bodyid)]
+        return np.concatenate([qpos, qvel, *jpos, pos, *path])
