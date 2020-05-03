@@ -34,6 +34,8 @@ class ReacherEnv3D(MujocoEnv, EzPickle):
 
     def new_model(self):
         root = copy.deepcopy(self.root)
+        option = root.find("option")
+        option.set("gravity", "0 0 0")
         worldbody = root.find("worldbody")
         self.create_path(worldbody)
         return self.load_model_from_xml(root)
