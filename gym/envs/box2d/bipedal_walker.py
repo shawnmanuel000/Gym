@@ -446,7 +446,7 @@ class BipedalWalker(gym.Env, EzPickle):
         return np.array(state), reward, done, {}
 
     def render(self, mode='human'):
-        from gym.envs.classic_control import rendering
+        from ..classic_control import rendering
         if self.viewer is None:
             self.viewer = rendering.Viewer(VIEWPORT_W, VIEWPORT_H)
         self.viewer.set_bounds(self.scroll, VIEWPORT_W/SCALE + self.scroll, 0, VIEWPORT_H/SCALE)

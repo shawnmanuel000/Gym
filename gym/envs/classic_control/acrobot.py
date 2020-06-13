@@ -174,7 +174,7 @@ class AcrobotEnv(core.Env):
         return (dtheta1, dtheta2, ddtheta1, ddtheta2, 0.)
 
     def render(self, mode='human'):
-        from gym.envs.classic_control import rendering
+        from . import rendering
 
         s = self.state
 

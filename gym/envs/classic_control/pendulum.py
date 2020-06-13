@@ -61,7 +61,7 @@ class PendulumEnv(gym.Env):
     def render(self, mode='human'):
 
         if self.viewer is None:
-            from gym.envs.classic_control import rendering
+            from . import rendering
             self.viewer = rendering.Viewer(500,500)
             self.viewer.set_bounds(-2.2,2.2,-2.2,2.2)
             rod = rendering.make_capsule(1, .2)

@@ -75,7 +75,7 @@ class MountainCarEnv(gym.Env):
 
 
         if self.viewer is None:
-            from gym.envs.classic_control import rendering
+            from . import rendering
             self.viewer = rendering.Viewer(screen_width, screen_height)
             xs = np.linspace(self.min_position, self.max_position, 100)
             ys = self._height(xs)
