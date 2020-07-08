@@ -10,4 +10,7 @@ from .utils import flatdim
 from .utils import flatten
 from .utils import unflatten
 
+import numpy as np
+prng = np
+
 __all__ = ["Space", "Box", "Discrete", "MultiDiscrete", "MultiBinary", "Tuple", "Dict", "flatdim", "flatten", "unflatten"]

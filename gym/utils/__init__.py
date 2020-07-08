@@ -7,3 +7,6 @@ not intended as API functions, and will not remain stable over time.
 # that verify that our dependencies are actually present.
 from .colorize import colorize
 from .ezpickle import EzPickle
+
+def reraise(**kwargs):
+	raise ImportError('\n'.join(kwargs.values()))
